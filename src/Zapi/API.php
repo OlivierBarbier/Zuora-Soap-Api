@@ -1,5 +1,6 @@
 <?php namespace OlivierBarbier\ZApi;
 
+use Exception;
 use SoapClient;
 use SoapHeader;
 
