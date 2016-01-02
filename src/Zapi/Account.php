@@ -1,4 +1,4 @@
-<?php namespace OlivierBarbier\ZApi;
+<?php namespace OlivierBarbier\Zapi;
 
 class Account extends Object
 {
