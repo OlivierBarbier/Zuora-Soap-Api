@@ -330,7 +330,7 @@ class API
             throw new ZuoraFault('ERROR in '.__METHOD__.': only supports up to 50 objects');
         }
         $soapVars = array();
-        $type = 'Object';
+        $type = 'OlivierBarbier\Zapi\Object';
 
         foreach ($zObjects as $zObject) {
             if ($zObject instanceof $type) {
@@ -368,7 +368,7 @@ class API
             throw new ZuoraFault('ERROR in '.__METHOD__.': only supports up to 50 objects');
         }
         $soapVars = array();
-        $type = 'Object';
+        $type = 'OlivierBarbier\Zapi\Object';
         foreach ($zObjects as $zObject) {
             if ($zObject instanceof $type) {
                 $type = get_class($zObject);
@@ -402,7 +402,7 @@ class API
             ZuoraFault('ERROR in '.__METHOD__.': only supports up to 50 objects');
         }
         $soapVars = array();
-        $type = 'Object';
+        $type = 'OlivierBarbier\Zapi\Object';
         foreach ($zObjects as $zObject) {
             if ($zObject instanceof $type) {
                 $type = get_class($zObject);

@@ -1,5 +1,7 @@
 <?php namespace OlivierBarbier\Zapi;
 
+use SoapVar;
+
 abstract class Object
 {
     const TYPE_NAMESPACE = 'http://object.api.zuora.com/';
