@@ -1,0 +1,16 @@
+{
+    "name": "olivierbarbier/zuora-soap-api",
+    "description": "Zuora SOAP API for PHP",
+    "keywords": [
+        "zuora",
+        "soap",
+        "api",
+        "php"
+    ],
+    "license": "MIT",
+    "autoload": {
+        "psr-4" : {
+            "OlivierBarbier\\": "src/"
+        }
+    }
+}
