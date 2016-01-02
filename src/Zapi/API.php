@@ -91,6 +91,7 @@ class API
      * @var SoapClient
      */
     protected $_client;
+
     public function client()
     {
         return $this->_client;
