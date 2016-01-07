@@ -7,7 +7,7 @@ class RatePlanChargeData extends Object
     protected $zType = 'RatePlanChargeData';
 
     /**
-     * @var Zuora_RatePlanCharge
+     * @var RatePlanCharge
      */
     public $zRatePlanCharge;
 
@@ -16,16 +16,16 @@ class RatePlanChargeData extends Object
      */
     private $_ratePlanChargeTierObjects = array();
 
-    public function __construct(Zuora_RatePlanCharge  $zRatePlanCharge = null)
+    public function __construct(RatePlanCharge  $zRatePlanCharge = null)
     {
         if (isset($zRatePlanCharge)) {
             $this->zRatePlanCharge = $zRatePlanCharge;
         } else {
-            $this->zRatePlanCharge = new Zuora_RatePlanCharge();
+            $this->zRatePlanCharge = new RatePlanCharge();
         }
     }
 
-    public function addRatePlanChargeTier(Zuora_RatePlanChargeTier $zRatePlanChargeTier)
+    public function addRatePlanChargeTier(RatePlanChargeTier $zRatePlanChargeTier)
     {
         $this->_ratePlanChargeTierObjects[] = $zRatePlanChargeTier;
     }
