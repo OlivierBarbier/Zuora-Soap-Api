@@ -1,1 +1,3 @@
 # Zuora SOAP API for PHP
+
+[![Latest Stable Version](https://poser.pugx.org/olivierbarbier/zuora-soap-api/v/stable)](https://packagist.org/packages/olivierbarbier/zuora-soap-api) [![Total Downloads](https://poser.pugx.org/olivierbarbier/zuora-soap-api/downloads)](https://packagist.org/packages/olivierbarbier/zuora-soap-api) [![Latest Unstable Version](https://poser.pugx.org/olivierbarbier/zuora-soap-api/v/unstable)](https://packagist.org/packages/olivierbarbier/zuora-soap-api) [![License](https://poser.pugx.org/olivierbarbier/zuora-soap-api/license)](https://packagist.org/packages/olivierbarbier/zuora-soap-api)
