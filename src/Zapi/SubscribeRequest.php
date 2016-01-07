@@ -5,12 +5,12 @@ class SubscribeRequest extends Object
     protected $zType = 'SubscribeRequest';
 
     public function __construct(
-        Zuora_Account $zAccount,
-        Zuora_Contact $zBillTo,
-        Zuora_PaymentMethod $zPaymentMethod,
-        Zuora_SubscriptionData $zSubscriptionData,
-        Zuora_SubscribeOptions $zOptions = null,
-        Zuora_Contact $zSoldTo = null
+        Account $zAccount,
+        Contact $zBillTo,
+        PaymentMethod $zPaymentMethod,
+        SubscriptionData $zSubscriptionData,
+        SubscribeOptions $zOptions = null,
+        Contact $zSoldTo = null
     ) {
         $this->_data = array(
             'Account' => $zAccount,

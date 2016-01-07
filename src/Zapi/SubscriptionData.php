@@ -25,7 +25,7 @@ class SubscriptionData extends Object
         }
     }
 
-    public function addRatePlanData(Zuora_RatePlanData $zRatePlanData)
+    public function addRatePlanData(RatePlanData $zRatePlanData)
     {
         $this->_ratePlanDataObjects[] = $zRatePlanData;
     }
