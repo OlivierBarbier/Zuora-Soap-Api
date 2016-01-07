@@ -7,7 +7,7 @@ class SubscriptionData extends Object
     protected $zType = 'SubscriptionData';
 
     /**
-     * @var Zuora_Subscription
+     * @var Subscription
      */
     public $zSubscription;
 
@@ -16,12 +16,12 @@ class SubscriptionData extends Object
      */
     private $_ratePlanDataObjects = array();
 
-    public function __construct(Zuora_Subscription $zSubscription = null)
+    public function __construct(Subscription $zSubscription = null)
     {
         if (isset($zSubscription)) {
             $this->zSubscription = $zSubscription;
         } else {
-            $this->zSubscription = new Zuora_Subscription();
+            $this->zSubscription = new Subscription();
         }
     }
 
