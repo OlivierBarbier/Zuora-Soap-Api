@@ -1,5 +1,7 @@
 <?php namespace OlivierBarbier\Zapi;
 
+use SoapVar;
+
 class SubscribeOptions extends Object
 {
     const TYPE_NAMESPACE = 'http://api.zuora.com/';

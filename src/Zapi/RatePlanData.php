@@ -1,5 +1,7 @@
 <?php namespace OlivierBarbier\Zapi;
 
+use SoapVar;
+
 class RatePlanData extends Object
 {
     const TYPE_NAMESPACE = 'http://api.zuora.com/';
