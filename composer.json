@@ -10,7 +10,7 @@
     "license": "MIT",
     "autoload": {
         "psr-4" : {
-            "OlivierBarbier\\Zapi\\": "src/Zapi/"
+            "Zuora\\": "src/Zuora/"
         }
     }
 }
