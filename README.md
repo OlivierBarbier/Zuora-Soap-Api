@@ -5,20 +5,24 @@
 
 ## Create an account
 
-```
+```php
 <?php
 require './vendor/autoload.php';
+
 use Zuora\ZuoraService;
 use Zuora\Account;
 use Zuora\create as Create;
 use Zuora\delete as Delete;
 use Zuora\login as Login;
+
 $zuoraService = new ZuoraService;
+
 try {
 	$loginResponse = $zuoraService->login(new Login(
 		'YOUR_LOGIN', 
 		'YOUR_PASSWORD'
 	));
+
 	$account = new Account;
 	$account->setBatch('Batch1')
 		->setBillCycleDay(1)
@@ -30,6 +34,7 @@ try {
 	$saveResults = $zuoraService
 		->create(new Create($account))
 		->getResult();
+
 	foreach($saveResults as $saveResult)
 	{
 		$accountId = $saveResult->getId();
