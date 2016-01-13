@@ -38,16 +38,8 @@ try {
 	foreach($saveResults as $saveResult)
 	{
 		$accountId = $saveResult->getId();
+
 		echo sprintf("New account Id: %s\n", $accountId);
-		$deleteResults = $zuoraService
-			->delete(new Delete('Account', $accountId))
-			->getResult();
-		foreach($deleteResults as $deleteResult)
-		{
-			if ($deleteResult->getSuccess()) {
-				echo sprintf("Deleted account Id: %s\n", $deleteResult->getId());
-			}
-		}
 	}
 } catch (SoapFault $soapFault) {
 	echo 'SoapFault: ' . $soapFault->getMessage(), "\n";
