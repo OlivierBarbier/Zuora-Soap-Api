@@ -13,15 +13,11 @@ Run the Composer command to install the latest stable version of Zuora SOAP API 
 composer require olivierbarbier/zuora-soap-api
 ```
 
-After installing, you need to require Composer's autoloader:
-
-```php
-require 'vendor/autoload.php';
-```
-
 ## Example: performing a ZOQL query
 
 ```php
+require 'vendor/autoload.php';
+
 use Zuora\Soap\Api;
 
 $api = Api::getInstance((object) ['wsdl' => 'path_to_your_zuora_wsdl']);
