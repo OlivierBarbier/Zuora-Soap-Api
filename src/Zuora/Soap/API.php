@@ -1,4 +1,4 @@
-<?php namespace Zuora;
+<?php namespace Zuora\Soap;
 
 use Exception;
 use SoapClient;
@@ -77,57 +77,57 @@ class API
     protected $_endpoint = null;
 
     protected static $_classmap = array(
-        'zObject'                       => 'Zuora\Object',
-        'Account'                       => 'Zuora\Account',
-        'InvoiceAdjustment'             => 'Zuora\InvoiceAdjustment',
-        'InvoiceItemAdjustment'         => 'Zuora\InvoiceItemAdjustment',
-        'Amendment'                     => 'Zuora\Amendment',
-        'BillRun'                       => 'Zuora\BillRun',
-        'Contact'                       => 'Zuora\Contact',
-        'CreditBalanceAdjustment'       => 'Zuora\CreditBalanceAdjustment',
-        'Invoice'                       => 'Zuora\Invoice',
-        'InvoiceItem'                   => 'Zuora\InvoiceItem',
-        'Refund'                        => 'Zuora\Refund',
-        'RefundInvoicePayment'          => 'Zuora\RefundInvoicePayment',
-        'InvoiceItem'                   => 'Zuora\InvoiceItem',
-        'InvoicePayment'                => 'Zuora\InvoicePayment',
-        'Payment'                       => 'Zuora\Payment',
-        'PaymentMethod'                 => 'Zuora\PaymentMethod',
-        'Product'                       => 'Zuora\Product',
-        'ProductRatePlan'               => 'Zuora\ProductRatePlan',
-        'ProductRatePlanCharge'         => 'Zuora\ProductRatePlanCharge',
-        'ProductRatePlanChargeTier'     => 'Zuora\ProductRatePlanChargeTier',
-        'RatePlan'                      => 'Zuora\RatePlan',
-        'RatePlanCharge'                => 'Zuora\RatePlanCharge',
-        'RatePlanChargeTier'            => 'Zuora\RatePlanChargeTier',
-        'Subscription'                  => 'Zuora\Subscription',
-        'Usage'                         => 'Zuora\Usage',
-        'Export'                        => 'Zuora\Export',
-        'ID'                            => 'Zuora\ID',
-        'SubscribeRequest'              => 'Zuora\SubscribeRequest',
-        'SubscribeOptions'              => 'Zuora\SubscribeOptions',
-        'SubscriptionData'              => 'Zuora\SubscriptionData',
-        'RatePlanData'                  => 'Zuora\RatePlanData',
-        'RatePlanChargeData'            => 'Zuora\RatePlanChargeData',
-        'ProductRatePlanChargeTierData' => 'Zuora\ProductRatePlanChargeTierData',
-        'InvoiceData'                   => 'Zuora\InvoiceData',
-        'PreviewOptions'                => 'Zuora\PreviewOptions',
-        'SubscribeResult'               => 'Zuora\SubscribeResult',
-        'QueryLocator'                  => 'Zuora\QueryLocator',
-        'Error'                         => 'Zuora\Error',
-        'ErrorCode'                     => 'Zuora\ErrorCode',
-        'SessionHeader'                 => 'Zuora\SessionHeader',
-        'DummyHeader'                   => 'Zuora\DummyHeader',
-        'ApiFault'                      => 'Zuora\ApiFault',
-        'LoginFault'                    => 'Zuora\LoginFault',
-        'InvalidTypeFault'              => 'Zuora\InvalidTypeFault',
-        'InvalidValueFault'             => 'Zuora\InvalidValueFault',
-        'MalformedQueryFault'           => 'Zuora\MalformedQueryFault',
-        'InvalidQueryLocatorFault'      => 'Zuora\InvalidQueryLocatorFault',
-        'UnexpectedErrorFault'          => 'Zuora\UnexpectedErrorFault',
-        'TaxationItem'                  => 'Zuora\TaxationItem',
-        'PaymentMethodSnapshot'         => 'Zuora\PaymentMethodSnapshot',
-        'RefundInvoicePayment'          => 'Zuora\RefundInvoicePayment',
+        'zObject'                       => 'Zuora\Soap\Object',
+        'Account'                       => 'Zuora\Soap\Account',
+        'InvoiceAdjustment'             => 'Zuora\Soap\InvoiceAdjustment',
+        'InvoiceItemAdjustment'         => 'Zuora\Soap\InvoiceItemAdjustment',
+        'Amendment'                     => 'Zuora\Soap\Amendment',
+        'BillRun'                       => 'Zuora\Soap\BillRun',
+        'Contact'                       => 'Zuora\Soap\Contact',
+        'CreditBalanceAdjustment'       => 'Zuora\Soap\CreditBalanceAdjustment',
+        'Invoice'                       => 'Zuora\Soap\Invoice',
+        'InvoiceItem'                   => 'Zuora\Soap\InvoiceItem',
+        'Refund'                        => 'Zuora\Soap\Refund',
+        'RefundInvoicePayment'          => 'Zuora\Soap\RefundInvoicePayment',
+        'InvoiceItem'                   => 'Zuora\Soap\InvoiceItem',
+        'InvoicePayment'                => 'Zuora\Soap\InvoicePayment',
+        'Payment'                       => 'Zuora\Soap\Payment',
+        'PaymentMethod'                 => 'Zuora\Soap\PaymentMethod',
+        'Product'                       => 'Zuora\Soap\Product',
+        'ProductRatePlan'               => 'Zuora\Soap\ProductRatePlan',
+        'ProductRatePlanCharge'         => 'Zuora\Soap\ProductRatePlanCharge',
+        'ProductRatePlanChargeTier'     => 'Zuora\Soap\ProductRatePlanChargeTier',
+        'RatePlan'                      => 'Zuora\Soap\RatePlan',
+        'RatePlanCharge'                => 'Zuora\Soap\RatePlanCharge',
+        'RatePlanChargeTier'            => 'Zuora\Soap\RatePlanChargeTier',
+        'Subscription'                  => 'Zuora\Soap\Subscription',
+        'Usage'                         => 'Zuora\Soap\Usage',
+        'Export'                        => 'Zuora\Soap\Export',
+        'ID'                            => 'Zuora\Soap\ID',
+        'SubscribeRequest'              => 'Zuora\Soap\SubscribeRequest',
+        'SubscribeOptions'              => 'Zuora\Soap\SubscribeOptions',
+        'SubscriptionData'              => 'Zuora\Soap\SubscriptionData',
+        'RatePlanData'                  => 'Zuora\Soap\RatePlanData',
+        'RatePlanChargeData'            => 'Zuora\Soap\RatePlanChargeData',
+        'ProductRatePlanChargeTierData' => 'Zuora\Soap\ProductRatePlanChargeTierData',
+        'InvoiceData'                   => 'Zuora\Soap\InvoiceData',
+        'PreviewOptions'                => 'Zuora\Soap\PreviewOptions',
+        'SubscribeResult'               => 'Zuora\Soap\SubscribeResult',
+        'QueryLocator'                  => 'Zuora\Soap\QueryLocator',
+        'Error'                         => 'Zuora\Soap\Error',
+        'ErrorCode'                     => 'Zuora\Soap\ErrorCode',
+        'SessionHeader'                 => 'Zuora\Soap\SessionHeader',
+        'DummyHeader'                   => 'Zuora\Soap\DummyHeader',
+        'ApiFault'                      => 'Zuora\Soap\ApiFault',
+        'LoginFault'                    => 'Zuora\Soap\LoginFault',
+        'InvalidTypeFault'              => 'Zuora\Soap\InvalidTypeFault',
+        'InvalidValueFault'             => 'Zuora\Soap\InvalidValueFault',
+        'MalformedQueryFault'           => 'Zuora\Soap\MalformedQueryFault',
+        'InvalidQueryLocatorFault'      => 'Zuora\Soap\InvalidQueryLocatorFault',
+        'UnexpectedErrorFault'          => 'Zuora\Soap\UnexpectedErrorFault',
+        'TaxationItem'                  => 'Zuora\Soap\TaxationItem',
+        'PaymentMethodSnapshot'         => 'Zuora\Soap\PaymentMethodSnapshot',
+        'RefundInvoicePayment'          => 'Zuora\Soap\RefundInvoicePayment',
     );
 
     /**
@@ -304,7 +304,7 @@ class API
             throw new ZuoraFault('ERROR in '.__METHOD__.': only supports up to 50 objects');
         }
         $soapVars = array();
-        $type = 'Zuora\Object';
+        $type = 'Zuora\Soap\Object';
 
         foreach ($zObjects as $zObject) {
             if ($zObject instanceof $type) {
@@ -342,7 +342,7 @@ class API
             throw new ZuoraFault('ERROR in '.__METHOD__.': only supports up to 50 objects');
         }
         $soapVars = array();
-        $type = 'Zuora\Object';
+        $type = 'Zuora\Soap\Object';
         foreach ($zObjects as $zObject) {
             if ($zObject instanceof $type) {
                 $type = get_class($zObject);
@@ -376,7 +376,7 @@ class API
             ZuoraFault('ERROR in '.__METHOD__.': only supports up to 50 objects');
         }
         $soapVars = array();
-        $type = 'Zuora\Object';
+        $type = 'Zuora\Soap\Object';
         foreach ($zObjects as $zObject) {
             if ($zObject instanceof $type) {
                 $type = get_class($zObject);

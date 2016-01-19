@@ -1,4 +1,4 @@
-<?php namespace Zuora;
+<?php namespace Zuora\Soap;
 
 use SoapVar;
 
