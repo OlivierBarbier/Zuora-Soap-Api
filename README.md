@@ -18,3 +18,22 @@ After installing, you need to require Composer's autoloader:
 ```php
 require 'vendor/autoload.php';
 ```
+
+## Example: performing a ZOQL query
+
+```php
+use Zuora\Soap\Api;
+
+$api = Api::getInstance((object) ['wsdl' => 'zuora.17.0.wsdl']);
+
+try {
+	$api->login('olivier@1001menus.com', 'olivier2@');
+
+	$query = $api->query('SELECT Id, Name FROM Account');
+
+	var_dump($query);
+} catch(\Exception $e) {
+	echo '>',$e->getMessage();
+	die;
+}
+```
