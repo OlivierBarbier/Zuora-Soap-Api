@@ -24,10 +24,10 @@ require 'vendor/autoload.php';
 ```php
 use Zuora\Soap\Api;
 
-$api = Api::getInstance((object) ['wsdl' => 'zuora.17.0.wsdl']);
+$api = Api::getInstance((object) ['wsdl' => 'path_to_your_zuora_wsdl']);
 
 try {
-	$api->login('olivier@1001menus.com', 'olivier2@');
+	$api->login('your_login', 'your_password');
 
 	$query = $api->query('SELECT Id, Name FROM Account');
 
