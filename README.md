@@ -4,11 +4,6 @@
 
 ## Installing Zuora SOAP API 
 
-The recommended way to install Zuora SOAP API is through
-[Composer](http://getcomposer.org).
-
-Run the Composer command to install the latest stable version of Zuora SOAP API :
-
 ```bash
 composer require olivierbarbier/zuora-soap-api
 ```
