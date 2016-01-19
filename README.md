@@ -29,4 +29,4 @@ try {
 }
 ```
 
-If you want more examples please have a look at [![Zuora PHP Quickstart Version](https://poser.pugx.org/olivierbarbier/zuora-soap-api/v/stable)](Zuora PHP Quickstart https://github.com/OlivierBarbier/php-quickstart) 
+If you want more examples please have a look at [![Zuora PHP Quickstart Version](https://github.com/OlivierBarbier/php-quickstart)](Zuora PHP Quickstart https://github.com/OlivierBarbier/php-quickstart) 
