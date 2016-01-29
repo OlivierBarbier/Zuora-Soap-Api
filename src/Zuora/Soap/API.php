@@ -2,6 +2,7 @@
 
 use Exception;
 use SoapClient;
+use SoapFault;
 use SoapHeader;
 
 /**
