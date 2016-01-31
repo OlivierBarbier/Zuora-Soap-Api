@@ -26,7 +26,7 @@ Unfortunately, the library provided by the toolkit has 4 main disavantages :
 * You can't install the library through composer,
 * the library does not take advantage of PHP 5.3.0 namespaces,
 * the library is deprecated (it is based on version 17 of the API but version 74 has already been released),
-* the library is not maintained (when I wrote this guide the the last commit (1810d4f99bd96c1367c35d6d17c09fe28ca570d5) date was Apr 4, 2012).
+* the library is not maintained (when I wrote this guide the last commit date was Apr 4, 2012 ([1810d4f](https://github.com/zuora/php-quickstart/commit/1810d4f99bd96c1367c35d6d17c09fe28ca570d5)).
 
 ### An enhanced version
 
