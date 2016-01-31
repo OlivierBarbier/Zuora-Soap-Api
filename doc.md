@@ -194,7 +194,7 @@ try {
 }
 ```
 # Conclusion
-When you work with generated file from a wsdl, you are assured to always get the right Zuora classes that perfectly represents what you can do with Zuora API. 
+When you work with generated classes from a wsdl, you are assured to always get the right Zuora classes that perfectly represents what you can do with Zuora API. 
 
 
 As a final remark, I would like to say that you can generalize that approach to any SOAP webservices. You are not limited to Zuora API.
