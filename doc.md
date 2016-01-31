@@ -7,7 +7,7 @@ Working with Zuora SOAP API (ZSA) is sometimes kind of a pain because of the dep
 
 In this short guide, I will help you walk trough ZSA, and more precisely show you how to set up a viable ZSA project in PHP.
 
-The project will contain up to date PHP classes that represent Zuora domain objects and a special class (ZuoraService) to interact with those domain objects and persist them into the Zuora platform.
+The project will contain up-to-date PHP classes that represent Zuora domain objects and a special class (ZuoraService) to interact with those domain objects and persist them into the Zuora platform.
 
 ## Prerequisites
 Before we start digging together into ZSA please ensure you have:
@@ -35,7 +35,7 @@ A better start in your experience with Zuora SOAP Api, could be to use my wrappe
 In order to do so, just `cd` into the root directory of your Zuora project and in a terminal window type `composer require olivierbarbier/zuora-soap-api`.
 You will have access to all Zuora domain Objects within the `\Zuora\Soap` namespace. And you will be able to make SOAP calls with the \Zuora\Soap\Api class.
 
-Below is an example of how to login to Zuora and perform a Zuora Query Object Language (ZOQL) query:
+Below is an example showing how to login to Zuora and perform a Zuora Query Object Language (ZOQL) query:
 
 ```php
 require 'vendor/autoload.php';
@@ -60,7 +60,7 @@ try {
 
 The previous approach does not fix the deprecated nature of the Zuora library because it is just a wrapper around it. Only fixing the namespace and composer issues.
 
-If you want an always up to date library, meaning a library that is always reflecting the latest version of the wsdl, you'll have to generate that library from your wsdl. 
+If you want an always up-to-date library, meaning a library that is always reflecting the latest version of the wsdl, you'll have to generate that library from your wsdl. 
 
 You can easily achieve that goal by using the wonderful [wsdl2phpgenerator](https://github.com/wsdl2phpgenerator/wsdl2phpgenerator) by kasperg and many community contributors.
 
@@ -156,7 +156,9 @@ public function create(create $parameters)
 }
 ```
 
-Now you're done with all the modifications, you can create an Account in your sandbox:
+Now you're done with all the modifications, you are ready to make the SOAP calls you want.
+
+As an example, let's create an Account in our sandbox:
 
 ```php
 require './vendor/autoload.php';
