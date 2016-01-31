@@ -5,9 +5,9 @@ Zuora SOAP Api for PHP developers
 ## Introduction
 Working with Zuora SOAP API (ZSA) is sometimes kind of a pain because of the deprecated library that Zuora offers to PHP developers.
 
-In this short guide, I will help you walk trough ZSA, and more precisely show you how to set up a viable ZSA project in PHP.
+In this short guide, I will help you to walk trough ZSA, and more precisely to show you how to set up a viable ZSA project in PHP.
 
-The project will contain up-to-date PHP classes that represent Zuora domain objects and a special class (ZuoraService) to interact with those domain objects and persist them into the Zuora platform.
+The project will contain up-to-date PHP classes that represent Zuora domain objects and a specific class (ZuoraService) that will interact with these domain objects and persist them into the Zuora platform.
 
 ## Prerequisites
 Before we start digging together into ZSA please ensure you have:
@@ -20,7 +20,7 @@ I assume you have basic knowledge of SOAP concepts (you know what is a wsdl, etc
 ## Let's get started
 
 ### Zuora's default toolkit and library
-If you have never worked with Zuora, a potential starting point could be to look at the [zuora php quickstart toolkit](https://github.com/zuora/php-quickstart). 
+If you have never worked with Zuora, a potential starting point could be to have a look at the [zuora php quickstart toolkit](https://github.com/zuora/php-quickstart). 
 Unfortunately, the library provided by the toolkit has 4 main disavantages : 
 
 * You can't install the library through composer,
@@ -58,9 +58,9 @@ try {
 
 ### The right way IMHO
 
-The previous approach does not fix the deprecated nature of the Zuora library because it is just a wrapper around it. Only fixing the namespace and composer issues.
+The previous approach does not fix the deprecated nature of the Zuora library because it is just a wrapper around it. it fixes the namespace and composer issues only.
 
-If you want an always up-to-date library, meaning a library that is always reflecting the latest version of the wsdl, you'll have to generate that library from your wsdl. 
+If you want an always up-to-date library, meaning a library that  always reflects the latest version of the wsdl, you'll have to generate that library from your wsdl. 
 
 You can easily achieve that goal by using the wonderful [wsdl2phpgenerator](https://github.com/wsdl2phpgenerator/wsdl2phpgenerator) by [kasperg](https://github.com/kasperg) and [many community contributors](https://github.com/wsdl2phpgenerator/wsdl2phpgenerator/graphs/contributors).
 
@@ -86,15 +86,15 @@ $generator->generate(
 
 At this stage, you've got a set of classes that represent the different Zuora domain objects you want to manipulate.
 
-The most important class is ZuoraService. This class is, obviously not a Zuora object but it is more a technical class which enable you to make SOAP calls to Zuora.
+The most important class is ZuoraService. This class is, obviously not a Zuora object but it is more a technical class which enables you to make SOAP calls to Zuora.
 
-As Zuora is requiring you to call `login` before you can use any other SOAP calls, you will have to perform some changes in the ZuoraService class. 
+As Zuora requires you to call `login` before you can use any other SOAP calls, you will have to perform some changes in the ZuoraService class. 
 
 ### Few changes to ZuoraService class
 
-In the ZuoraService class, you will find the login call represented by a method of the same name. This method return a session token that you'll have to pass to any other call you'll want to use.
+In the ZuoraService class, you will find the login call represented by a method of the same name. This method returns a session token that you'll have to pass to any other call you'll want to use.
 
-So, in the ZuoraService class, wsld2phpgenerator generate the `login` call that way:
+So, in the ZuoraService class, wsld2phpgenerator generates the `login` call that way:
 
 ```php
 public function login(login $parameters)
@@ -193,7 +193,7 @@ try {
 	echo 'SoapFault: ' . $soapFault->getMessage(), "\n";
 }
 ```
-# Conclusion
+# In conclusion
 When you work with generated classes from a wsdl, you are assured to always get the right Zuora classes that perfectly represents what you can do with Zuora API. 
 
 
