@@ -1,4 +1,4 @@
-Zuora SOAP Api for PHP developers: the right way
+Zuora SOAP Api for PHP developers
 =======
 
 
