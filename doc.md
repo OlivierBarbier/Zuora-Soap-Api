@@ -62,7 +62,7 @@ The previous approach does not fix the deprecated nature of the Zuora library be
 
 If you want an always up-to-date library, meaning a library that is always reflecting the latest version of the wsdl, you'll have to generate that library from your wsdl. 
 
-You can easily achieve that goal by using the wonderful [wsdl2phpgenerator](https://github.com/wsdl2phpgenerator/wsdl2phpgenerator) by kasperg and many community contributors.
+You can easily achieve that goal by using the wonderful [wsdl2phpgenerator](https://github.com/wsdl2phpgenerator/wsdl2phpgenerator) by [kasperg](https://github.com/kasperg) and many community contributors.
 
 With this library, you will be able to generate the right PHP classes that fit exactly to the wsdl version you are using (with just a few changes to make Soap calls work properly).
 
