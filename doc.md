@@ -58,7 +58,7 @@ try {
 
 ### The right way IMHO
 
-The previous approach does not fix the deprecated nature of the Zuora library because it is just a wrapper around it. it fixes the namespace and composer issues only.
+The previous approach does not fix the deprecated nature of the Zuora library because it is just a wrapper around it. It fixes the namespace and composer issues only.
 
 If you want an always up-to-date library, meaning a library that  always reflects the latest version of the wsdl, you'll have to generate that library from your wsdl. 
 
