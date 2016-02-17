@@ -193,7 +193,7 @@ try {
 	echo 'SoapFault: ' . $soapFault->getMessage(), "\n";
 }
 ```
-# In conclusion
+# Conclusion
 When you work with generated classes from a wsdl, you are assured to always get the right Zuora classes that perfectly represents what you can do with Zuora API. 
 
 
